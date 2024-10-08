@@ -1,0 +1,132 @@
+/* General Styles */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  transition: background-color 0.5s ease;
+}
+
+.app-container:hover {
+  background-color: #e0f7fa;
+}
+
+.app-title {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #333;
+  text-shadow: 1px 1px 2px #000;
+  transition: color 0.5s ease;
+}
+
+.app-title:hover {
+  color: #00796b;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.input-field {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: #00796b;
+  outline: none;
+}
+
+.search-button {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #00796b;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #004d40;
+}
+
+.loading {
+  font-size: 1.2em;
+  color: #00796b;
+}
+
+.meme-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  position: relative;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.pokemon-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: scaleUp 1s ease-in-out;
+}
+
+.meme-text {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 1.2em;
+  text-align: center;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+  animation: fadeInUp 1s 0.5s forwards;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
